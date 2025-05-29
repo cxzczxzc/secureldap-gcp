@@ -1,0 +1,61 @@
+# Ignore common credential file types and patterns
+*.env
+*.key
+*.pem
+*.pfx
+*.cer
+*.crt
+*.pub
+*.secret
+*.cred
+*.confidential
+credentials.*
+secrets.*
+token.json
+users.json
+ssh_keys_create.sh
+# Ignore .txt files
+*.txt
+
+# Ignore specific files that might contain credentials
+id_rsa
+id_rsa.pub
+config.ini
+settings.py 
+secrets.py
+config.json
+secrets.json
+.htpasswd
+.env.local
+.env.development
+.env.production
+
+# Ignore Google Cloud specific credential files
+gcloud/credentials
+~/.config/gcloud/credentials
+
+# Ignore Azure specific credential files
+~/.azure/credentials
+
+# Ignore Docker specific credential files
+~/.docker/config.json
+
+# Ignore potential database connection string files
+database.yml
+database.ini
+db.config
+
+# Ignore common log files (may contain sensitive info)
+*.log
+logs/
+
+# Ignore history files (may contain commands with sensitive info)
+.bash_history
+.zsh_history
+.ksh_history
+
+# Ignore other potential sources of sensitive information
+dump.sql
+backup.tar.gz
+*.bak
+*.old
