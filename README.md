@@ -244,13 +244,16 @@ This completes the Secure LDAP client configuration on the GCE VM. Users should 
 
 ## Critical Watchpoints
 
-### 1. **Users' Home Directory:**The users' home directory might have been configured differently than what is set in the posix attributes. If so, run the `update_user_home_directory.sh` script to update this for maintaining the same access as users had with OS Login.
+### 1. Users' Home Directory:
+The users' home directory might have been configured differently than what is set in the posix attributes. If so, run the `update_user_home_directory.sh` script to update this for maintaining the same access as users had with OS Login.
 
-### 2. **GID/UID collision:** If GIDs/UIDs configured locally on the OS collide with what's configured on Secure LDAP, it can lead to bad access, or lock the user out of the operating system. This happens because NSS is configured to first examine the local os files, such as `etc/passwd` or `etc/groups` before pulling this information from Secure LDAP. 
+### 2. GID/UID collision:
+If GIDs/UIDs configured locally on the OS collide with what's configured on Secure LDAP, it can lead to bad access, or lock the user out of the operating system. This happens because NSS is configured to first examine the local os files, such as `etc/passwd` or `etc/groups` before pulling this information from Secure LDAP. 
    
 To avoid running into this scenario, UID/GID mapping has to be carefully planned before starting the migration.
 
-### 3. **Groups POSIX Attributes Not Editable (GID):**  [POSIX groups in Cloud Identity](https://cloud.google.com/identity/docs/groups) are scheduled to be deprecated at the same time as OS Login based on POSIX groups. It means that we cannot directly update the `posixAttributes` for a group, the same way we can for a user. 
+### 3. Groups POSIX Attributes Not Editable (GID):
+[POSIX groups in Cloud Identity](https://cloud.google.com/identity/docs/groups) are scheduled to be deprecated at the same time as OS Login based on POSIX groups. It means that we cannot directly update the `posixAttributes` for a group, the same way we can for a user. 
 
 This leaves us with the following alternatives:
 

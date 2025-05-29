@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # This file is for configuring Name Service Switch (NSS) on a GCE instance.
 # It is intended to be run with sudo permissions.
 # This file tells the Linux operating system which services to use for looking up 
