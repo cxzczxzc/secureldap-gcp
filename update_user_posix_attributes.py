@@ -8,7 +8,7 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
 # --- Configuration ---
-CREDENTIALS_JSON_PATH = '/Users/saadx/Documents/PSO/2025/Mayo/OS Login POSIX Groups/posix_attribute_update_app/credentials.json'
+CREDENTIALS_JSON_PATH = 'posix_attribute_update_app/credentials.json'
 API_SERVICE_NAME = 'admin'
 API_VERSION = 'directory_v1'
 

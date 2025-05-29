@@ -10,7 +10,7 @@ from googleapiclient.errors import HttpError
 
 # --- Configuration ---
 # Full path to your credentials file (ensure this is correct)
-CREDENTIALS_JSON_PATH = '/Users/saadx/Documents/PSO/2025/Mayo/OS Login POSIX Groups/posix_attribute_update_app/credentials.json'
+CREDENTIALS_JSON_PATH = '/posix_attribute_update_app/credentials.json'
 
 # Token file will be stored in the same directory as credentials.json
 TOKEN_JSON_PATH = os.path.join(os.path.dirname(CREDENTIALS_JSON_PATH), 'token.json')
