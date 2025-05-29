@@ -56,7 +56,7 @@ The user running the script must have `User Management Administrator`, which can
 
 Follow these steps carefully to configure Secure LDAP client access on your GCE VMs.
 
-### 1.Update Users' `posixAttributes`
+### 1. Update Users' `posixAttributes`
 
 This initial step involves setting essential POSIX attributes (uid, gid, homeDirectory, loginShell) for each user in Cloud Identity who will be using Secure LDAP to access GCE VMs. These attributes define the user's identity within a Linux/UNIX environment.
 * `uid`: A unique numerical user identifier.
