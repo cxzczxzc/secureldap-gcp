@@ -73,7 +73,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python update_user_posix_attributes.py
 ```
-**Note**: Note: Ensure `credentials.json` is correctly configured before running.
+**Note**: Ensure `credentials.json` is correctly configured before running.
 
 ### 2. Verify `posixAttributes` Update
 
