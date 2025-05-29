@@ -89,9 +89,9 @@ From the Google Admin console (under the Secure LDAP service settings for your O
 - **Action:**
 Navigate to Secure LDAP settings in Google Admin console.
 
-Generate and/or download the certificate and key. You'll typically get a `.crt` (certificate) and a `.key` (private key) file.
+Generate and/or download the certificate and key. You'll get a `.crt` (certificate) and a `.key` (private key) file.
 
-Secure Storage: Upload these downloaded certificate and key files to Google Cloud Secret Manager in your GCP project. Secret Manager provides a secure and auditable way to store and manage these sensitive files.
+**Secure Storage:** Upload these downloaded certificate and key files to Google Cloud Secret Manager in your GCP project. Secret Manager provides a secure and auditable way to store and manage these sensitive files.
 
 Create two secrets: one for the certificate (e.g., `secureldap-cert`) and one for the key (e.g., `secureldap-key`)
 
